@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+h2 Events
+
+ul
+    for event in getCollection('events').toJSON()
+        li
+            a(href="/#{event.relativeOutDirPath}/#{event.basename}") #{event.displayTitle}
